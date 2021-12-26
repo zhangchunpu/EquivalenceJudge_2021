@@ -63,14 +63,6 @@ if __name__ == '__main__':
 
     #数式の詳しい情報を表示させる
     if button:
-        if st.checkbox('show the mathml content of equation group two'):
-            st.text(mathml_content_two)
-        if st.checkbox('show the variables to be eliminated in equation group two'):
-            if eq_group_two_param:
-                eq_group_two_param_str = '\hspace{0.1in}'.join(map(str, eq_group_two_param))
-                st.latex(eq_group_two_param_str)
-            else:
-                st.text('no variables to eliminate')
 
         if st.checkbox('show the mathml content of equation group one'):
             st.text(mathml_content_one)
@@ -78,6 +70,15 @@ if __name__ == '__main__':
             if eq_group_one_param:
                 eq_group_one_param_str = '\hspace{0.1in}'.join(map(str, eq_group_one_param))
                 st.latex(eq_group_one_param_str)
+            else:
+                st.text('no variables to eliminate')
+
+        if st.checkbox('show the mathml content of equation group two'):
+            st.text(mathml_content_two)
+        if st.checkbox('show the variables to be eliminated in equation group two'):
+            if eq_group_two_param:
+                eq_group_two_param_str = '\hspace{0.1in}'.join(map(str, eq_group_two_param))
+                st.latex(eq_group_two_param_str)
             else:
                 st.text('no variables to eliminate')
 
